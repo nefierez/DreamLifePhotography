@@ -6,5 +6,8 @@
         {
             "path": "../Week02/team4"
         }
-    ]
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "DreamLifePhotography"
+    }
 }
