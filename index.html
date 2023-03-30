@@ -5,33 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.scss">
+    <link rel="stylesheet" href="styles/style.css">
     <title>DreamLifePhotography</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="../assets/camera_logo.svg" alt="Camara image for logo">
-                <a href="#">Dream Life<br></a><span>Photography</span>
-                <button></button>
+        <div class="section-top">
+            <img src="assets/web_logo.svg" alt="Camara image for logo">
+            <a href="#">Dream Life<br><span>Photography</span></a>
+            <div class="menuIcon" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li>Services
-                        <ul>
-                            <li>Weddings</li>
-                            <li>Couples</li>
-                            <li>Families</li>
-                            <li>Birthdays</li>
-                            <li>Graduations</li>
-                            <li>Newborns</li>
-                        </ul>
-                    </li>
-                    <li>Contact Us</li>
-                </ul>
+        </div>
+        <nav class="sideMenu">
+            <ul class="primaryList">
+                <li><a href="#">Home</a></li>
+                <li class="services">Services
+                    <ul class="secondaryList">
+                        <li><a href="/src/gallery.html">Weddings</a></li>
+                        <li>Couples</li>
+                        <li>Families</li>
+                        <li>Birthdays</li>
+                        <li>Graduations</li>
+                        <li>Newborns</li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
             </div>
         </nav>
     </header>
@@ -45,5 +48,6 @@
         </div>
     </main>
 </body>
+<script src="/src/index.js"></script>
 
 </html>
