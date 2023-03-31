@@ -1,11 +1,10 @@
 export default function sessionSelector() {
-    return new Promise((resolve) => {
-        const sessionTypes = document.querySelectorAll(".sessionType");
-        sessionTypes.forEach((sessionType) => {
-            sessionType.addEventListener("click", () => {
-                const querySearch = Array.from(sessionType.classList).slice(1).join(' ');
-                resolve(querySearch);
-            });
+    const sessionTypes = document.querySelectorAll(".sessionType");
+    sessionTypes.forEach((sessionType) => {
+        sessionType.addEventListener("click", (event) => {
+            event.preventDefault();
+            const querySearch = sessionType.getAttribute("id");
+            window.location.href = `gallery.html?id=${querySearch}`;
         });
     });
 }
