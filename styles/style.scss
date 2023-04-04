@@ -6,6 +6,8 @@ $colorTwo: #13101c;
 $colorThree: #9c0e59;
 $colorFour: #082b63;
 $colorFive: #1d7bb7;
+$colorGround: #000;
+$colorTitle: orange;
 $titlesFont: 'Playfair Display',
 serif;
 $paragraphsFont: 'Roboto',
@@ -46,10 +48,11 @@ $menu-bottom: 100vh;
         font-family: $menuFooterFont;
     }
 
-    a {
+    a,
+    a p {
         font-family: $menuFooterFont;
         text-decoration: none;
-        color: #9c0e59;
+        color: $colorTitle;
     }
 }
 
@@ -60,21 +63,28 @@ header {
         align-items: center;
         justify-content: space-between;
         height: $menu-top;
-        background: $colorTwo;
+        background: linear-gradient(to right top, $colorFour, $colorTwo 75%);
 
         img {
-            width: 75px;
+            width: 50px;
+            margin-left: 10px;
+        }
+
+        a {
+            text-align: center;
+            letter-spacing: 4px;
         }
 
         .menuIcon {
             cursor: pointer;
+            margin-right: 5px;
 
             span {
                 display: block;
                 height: 6px;
                 width: 40px;
                 margin: 5px;
-                background: #9c0e59;
+                background: $colorThree;
                 @include shortTransicion;
             }
         }
@@ -104,14 +114,20 @@ header {
         .primaryList {
             @include flexi;
             width: 300px;
-            background-color: #1d7bb7;
+            background-color: ghostwhite;
             height: calc($menu-bottom - $menu-top);
-            padding-left: 30px;
             list-style: none;
 
             li {
                 padding: 20px;
+                padding-left: 50px;
                 cursor: pointer;
+                color: $colorTwo;
+
+                &:not(:nth-child(2)):hover {
+                    color: $colorTitle;
+                    background: $colorTwo;
+                }
             }
         }
 
@@ -140,14 +156,14 @@ header {
 
 
 footer {
-    background: $colorTwo;
-    color: #1d7bb7;
+    background: linear-gradient(to right top, #13101c 50%, #082b63);
+    color: $colorTitle;
     padding: 1rem;
-    line-height: 1.5rem;
     text-align: center;
 
     #footerContact {
         margin: 1rem;
+        line-height: 1.5rem;
 
         #footerContact p {
             margin: 0.3rem 0;
@@ -170,51 +186,50 @@ footer {
             justify-content: center;
 
             #inputEmail {
-                color: var(--color1);
-                border: none;
-                font-weight: 550;
-                text-align: center;
-            }
-
-            #inputEmail,
-            #newsletterButton {
-                font-size: 1rem;
-                padding: 0.8rem;
                 width: 80%;
+                border: none;
+                padding: 0.8rem;
+                font-size: 1rem;
+                font-weight: 550;
+                color: $colorThree;
                 text-align: center;
             }
 
             #newsletterButton {
-                padding: 0.5rem 1rem;
-                border-radius: 0.3rem;
+                width: 80%;
                 border: none;
-                background-color: var(--color5);
-                color: var(--color4);
-                font-family: 'Libre Baskerville', serif;
-                text-transform: uppercase;
                 cursor: pointer;
+                padding: 0.8rem;
+                font-size: 1rem;
+                color: $colorTitle;
+                background-color: $colorFour;
+                text-transform: uppercase;
 
                 &:hover {
-                    background-color: var(--color4);
-                    color: var(--color5);
+                    font-weight: 600;
+                    color: ghostwhite;
+                    background-color: $colorThree;
                 }
             }
         }
     }
 
     .logo {
-        max-width: 350px;
-        margin: 0 auto;
+        display: block;
+        padding-bottom: 2rem;
 
+        a img {
+            width: 50px;
+        }
 
-        .logo img {
-            width: 100%;
-            padding: 1rem 2rem;
+        a p {
+            letter-spacing: 4px;
         }
     }
 
     #myInfo {
-        margin-top: 1rem;
+        color: ghostwhite;
+        font-size: 1.2rem;
     }
 }
 

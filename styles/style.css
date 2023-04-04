@@ -14,10 +14,11 @@
 * li {
   font-family: "Amagro", sans-serif;
 }
-* a {
+* a,
+* a p {
   font-family: "Amagro", sans-serif;
   text-decoration: none;
-  color: #9c0e59;
+  color: orange;
 }
 
 header .section-top {
@@ -25,13 +26,19 @@ header .section-top {
   align-items: center;
   justify-content: space-between;
   height: 75px;
-  background: #13101c;
+  background: linear-gradient(to right top, #082b63, #13101c 75%);
 }
 header .section-top img {
-  width: 75px;
+  width: 50px;
+  margin-left: 10px;
+}
+header .section-top a {
+  text-align: center;
+  letter-spacing: 4px;
 }
 header .section-top .menuIcon {
   cursor: pointer;
+  margin-right: 5px;
 }
 header .section-top .menuIcon span {
   display: block;
@@ -61,14 +68,19 @@ header nav .primaryList {
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: #1d7bb7;
+  background-color: ghostwhite;
   height: calc(100vh - 75px);
-  padding-left: 30px;
   list-style: none;
 }
 header nav .primaryList li {
   padding: 20px;
+  padding-left: 50px;
   cursor: pointer;
+  color: #13101c;
+}
+header nav .primaryList li:not(:nth-child(2)):hover {
+  color: orange;
+  background: #13101c;
 }
 header nav .services .secondaryList {
   display: none;
@@ -87,14 +99,14 @@ header .menuDisplay {
 }
 
 footer {
-  background: #13101c;
-  color: #1d7bb7;
+  background: linear-gradient(to right top, #13101c 50%, #082b63);
+  color: orange;
   padding: 1rem;
-  line-height: 1.5rem;
   text-align: center;
 }
 footer #footerContact {
   margin: 1rem;
+  line-height: 1.5rem;
 }
 footer #footerContact #footerContact p {
   margin: 0.3rem 0;
@@ -114,42 +126,42 @@ footer #newsletter label {
   justify-content: center;
 }
 footer #newsletter label #inputEmail {
-  color: var(--color1);
-  border: none;
-  font-weight: 550;
-  text-align: center;
-}
-footer #newsletter label #inputEmail,
-footer #newsletter label #newsletterButton {
-  font-size: 1rem;
-  padding: 0.8rem;
   width: 80%;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #9c0e59;
   text-align: center;
 }
 footer #newsletter label #newsletterButton {
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  width: 80%;
   border: none;
-  background-color: var(--color5);
-  color: var(--color4);
-  font-family: "Libre Baskerville", serif;
-  text-transform: uppercase;
   cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: orange;
+  background-color: #082b63;
+  text-transform: uppercase;
 }
 footer #newsletter label #newsletterButton:hover {
-  background-color: var(--color4);
-  color: var(--color5);
+  font-weight: 600;
+  color: ghostwhite;
+  background-color: #9c0e59;
 }
 footer .logo {
-  max-width: 350px;
-  margin: 0 auto;
+  display: block;
+  padding-bottom: 2rem;
 }
-footer .logo .logo img {
-  width: 100%;
-  padding: 1rem 2rem;
+footer .logo a img {
+  width: 50px;
+}
+footer .logo a p {
+  letter-spacing: 4px;
 }
 footer #myInfo {
-  margin-top: 1rem;
+  color: ghostwhite;
+  font-size: 1.2rem;
 }
 
 .heroSection {
