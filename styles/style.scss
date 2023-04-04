@@ -248,13 +248,71 @@ footer {
 
 
 .heroSection {
-    background: #000 url("../assets/abstract.91fe92b5.jpg") 0 0 / cover;
     padding: 50px;
 }
 
 
 /* Medium devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 650px) {
+    header {
+        height: 75px;
+        display: flex;
+        justify-content: space-around;
+        background: linear-gradient(to right top, $colorFour, $colorTwo 75%);
+
+        .section-top {
+            background: transparent;
+
+            a {
+                margin: auto 25px;
+            }
+
+            .menuIcon {
+                display: none;
+            }
+        }
+
+        .sideMenu {
+            width: auto;
+            transform: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .menuList {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                background: transparent;
+
+
+                li {
+                    font-size: .75rem;
+                    padding: 15px;
+                    color: $colorTitle;
+
+                    &:hover {
+                        color: $colorThree;
+                        background: transparent;
+                        border-bottom: 2px solid $colorThree;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    header {
+        .sideMenu .menuList {
+
+            li {
+                font-size: .85rem;
+                margin: 15px;
+            }
+        }
+    }
+}

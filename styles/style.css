@@ -165,11 +165,58 @@ footer #myInfo {
 }
 
 .heroSection {
-  background: #000 url("../assets/abstract.91fe92b5.jpg") 0 0/cover;
   padding: 50px;
 }
 
 /* Medium devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 650px) {
+  header {
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right top, #082b63, #13101c 75%);
+  }
+  header .section-top {
+    background: transparent;
+  }
+  header .section-top a {
+    margin: auto 25px;
+  }
+  header .section-top .menuIcon {
+    display: none;
+  }
+  header .sideMenu {
+    width: auto;
+    transform: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  header .sideMenu .menuList {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+  }
+  header .sideMenu .menuList li {
+    font-size: 0.75rem;
+    padding: 15px;
+    color: orange;
+  }
+  header .sideMenu .menuList li:hover {
+    color: #9c0e59;
+    background: transparent;
+    border-bottom: 2px solid #9c0e59;
+    box-shadow: none;
+  }
+}
 /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header .sideMenu .menuList li {
+    font-size: 0.85rem;
+    margin: 15px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
