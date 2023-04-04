@@ -16,22 +16,25 @@ function toggleNav() {
 
 function displayingServices() {
     const displayServices = document.querySelector(".services");
-    const servicesList = document.querySelector(".secondaryList");
+    const servicesList = document.querySelectorAll(".servicesHide");
 
     displayServices.addEventListener("click", () => {
-        displayServices.classList.toggle("active");
-        servicesList.classList.toggle("show");
+        servicesList.forEach((service) => {
+            service.classList.toggle("servicesShow");
+        });
     });
 };
 
 function closingMenu() {
     const menuDisplay = document.querySelector(".menuDisplay");
-    const servicesList = document.querySelector(".secondaryList");
+    const servicesList = document.querySelectorAll(".servicesHide");
 
     menuDisplay.addEventListener("click", (event) => {
         if (!event.target.closest(".sideMenu ul")) {
             menuDisplay.classList.remove("menuDisplay");
-            servicesList.classList.remove("show");
+            servicesList.forEach((service) => {
+                service.classList.remove("servicesShow");
+            });
             const menuBars = document.querySelectorAll(".menuIcon span");
             const menuIcon = document.querySelector(".menuIcon");
             for (let menuBar of menuBars) {

@@ -21,6 +21,9 @@
   color: orange;
 }
 
+header {
+  position: relative;
+}
 header .section-top {
   display: flex;
   align-items: center;
@@ -30,7 +33,7 @@ header .section-top {
 }
 header .section-top img {
   width: 50px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 header .section-top a {
   text-align: center;
@@ -38,7 +41,7 @@ header .section-top a {
 }
 header .section-top .menuIcon {
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 15px;
 }
 header .section-top .menuIcon span {
   display: block;
@@ -60,11 +63,11 @@ header .section-top .closeIcon .menuBars:last-child {
 header nav {
   width: 100%;
   backdrop-filter: blur(2px);
-  position: absolute;
+  position: fixed;
   transform: translateX(-100%);
   transition: 500ms ease-in-out;
 }
-header nav .primaryList {
+header nav .menuList {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -72,27 +75,24 @@ header nav .primaryList {
   height: calc(100vh - 75px);
   list-style: none;
 }
-header nav .primaryList li {
+header nav .menuList li {
   padding: 20px;
   padding-left: 50px;
   cursor: pointer;
   color: #13101c;
 }
-header nav .primaryList li:not(:nth-child(2)):hover {
+header nav .menuList li:hover {
   color: orange;
-  background: #13101c;
+  background: #082b63;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-header nav .services .secondaryList {
+header nav .menuList .servicesHide {
   display: none;
-  list-style: none;
-  margin-top: 20px;
-  margin-bottom: -20px;
 }
-header nav .services .secondaryList li {
-  padding: 15px;
-}
-header nav .services.active .secondaryList {
+header nav .menuList .servicesShow {
   display: block;
+  padding: 15px;
+  padding-left: 75px;
 }
 header .menuDisplay {
   transform: translateX(0%);
