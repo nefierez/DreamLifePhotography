@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-* h1 {
+* h1,
+* h2,
+* h3 {
   font-family: "Playfair Display", serif;
 }
 * p {
@@ -86,7 +88,8 @@ header nav .menuList li:hover {
   background: #082b63;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-header nav .menuList .servicesHide {
+header nav .menuList .servicesHide,
+header nav .menuList .servicesHideSmallView {
   display: none;
 }
 header nav .menuList .servicesShow {
@@ -96,6 +99,61 @@ header nav .menuList .servicesShow {
 }
 header .menuDisplay {
   transform: translateX(0%);
+}
+
+.heroSection h1 {
+  text-align: center;
+  color: #9c0e59;
+  margin-bottom: 25px;
+}
+.heroSection p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  color: #13101c;
+}
+
+.sessionProcess {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.sessionProcess section {
+  display: flex;
+  flex-direction: column;
+  padding: 75px;
+}
+.sessionProcess section:nth-child(odd) {
+  background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
+}
+.sessionProcess section h2 {
+  color: orange;
+  margin-bottom: 25px;
+}
+.sessionProcess section p {
+  color: #082b63;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+}
+.sessionProcess section ul {
+  margin-bottom: 25px;
+  padding: 0 25px;
+}
+.sessionProcess section ul li {
+  color: #13101c;
+  text-align: justify;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5px;
+}
+.sessionProcess section picture img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 footer {
@@ -209,6 +267,13 @@ footer #myInfo {
     background: transparent;
     border-bottom: 2px solid #9c0e59;
     box-shadow: none;
+  }
+  header .sideMenu .menuList .services,
+  header .sideMenu .menuList .servicesHide {
+    display: none;
+  }
+  header .sideMenu .menuList .servicesHideSmallView {
+    display: block;
   }
   footer section iframe {
     width: 80%;

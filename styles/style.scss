@@ -36,7 +36,9 @@ $menu-bottom: 100vh;
     padding: 0;
     box-sizing: border-box;
 
-    h1 {
+    h1,
+    h2,
+    h3 {
         font-family: $titlesFont;
     }
 
@@ -132,7 +134,8 @@ header {
                 }
             }
 
-            .servicesHide {
+            .servicesHide,
+            .servicesHideSmallView {
                 display: none;
             }
 
@@ -148,6 +151,71 @@ header {
         transform: translateX(0%);
     }
 }
+
+.heroSection {
+    h1 {
+        text-align: center;
+        color: $colorThree;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.5rem;
+        margin-bottom: 25px;
+        color: $colorTwo;
+    }
+}
+
+.sessionProcess {
+    @include flexi;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    section {
+        @include flexi;
+        padding: 75px;
+
+        &:nth-child(odd) {
+            background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
+        }
+
+        h2 {
+            color: $colorTitle;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $colorFour;
+            font-size: 18px;
+            text-align: justify;
+            line-height: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            margin-bottom: 25px;
+            padding: 0 25px;
+
+            li {
+                color: $colorTwo;
+                text-align: justify;
+                line-height: 1.5rem;
+                font-family: $paragraphsFont;
+                margin-bottom: 5px;
+            }
+        }
+
+        picture img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+    }
+}
+
+
 
 footer {
     background: linear-gradient(to right top, #13101c 50%, #082b63);
@@ -282,6 +350,15 @@ footer {
                         border-bottom: 2px solid $colorThree;
                         box-shadow: none;
                     }
+                }
+
+                .services,
+                .servicesHide {
+                    display: none;
+                }
+
+                .servicesHideSmallView {
+                    display: block;
                 }
             }
         }
