@@ -4,7 +4,7 @@ export default function sessionSelector() {
         sessionType.addEventListener("click", (event) => {
             event.preventDefault();
             const querySearch = sessionType.getAttribute("id");
-            window.location.href = `gallery.html?id=${querySearch}`;
+            window.location.href = `services/gallery.html?id=${querySearch}`;
         });
     });
 }
