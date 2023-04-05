@@ -153,6 +153,8 @@ header {
 }
 
 .heroSection {
+    padding: 50px;
+
     h1 {
         text-align: center;
         color: $colorThree;
@@ -174,8 +176,7 @@ header {
     align-items: center;
 
     section {
-        @include flexi;
-        padding: 75px;
+        padding: 75px 60px;
 
         &:nth-child(odd) {
             background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
@@ -207,10 +208,16 @@ header {
             }
         }
 
-        picture img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        picture {
+            @include flexi;
+            max-width: 550px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            }
         }
     }
 }
@@ -296,14 +303,6 @@ footer {
 }
 
 
-
-
-
-.heroSection {
-    padding: 50px;
-}
-
-
 /* Medium devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 700px) {
     header {
@@ -364,6 +363,29 @@ footer {
         }
     }
 
+    .heroSection {
+        padding: 75px 100px;
+    }
+
+    .sessionProcess {
+        section {
+            padding: 85px;
+
+            ul {
+                padding: 0 50px;
+
+                li {
+                    font-size: 18px
+                }
+            }
+
+            picture {
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+    }
+
     footer {
         section iframe {
             width: 80%;
@@ -396,6 +418,29 @@ footer {
             li {
                 font-size: .85rem;
                 margin: 15px;
+            }
+        }
+    }
+
+    .sessionProcess {
+        section {
+            display: grid;
+            padding: 50px;
+            grid-template-columns: 1fr 1fr;
+
+            &:nth-child(even) div {
+                    order: 2;
+            }
+
+            div {
+                margin: auto 25px;
+            }
+
+            picture {
+                width: 75%;
+                max-width: 500px;
+                display: flex;
+                justify-content: center;
             }
         }
     }

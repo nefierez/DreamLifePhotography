@@ -101,6 +101,9 @@ header .menuDisplay {
   transform: translateX(0%);
 }
 
+.heroSection {
+  padding: 50px;
+}
 .heroSection h1 {
   text-align: center;
   color: #9c0e59;
@@ -121,9 +124,7 @@ header .menuDisplay {
   align-items: center;
 }
 .sessionProcess section {
-  display: flex;
-  flex-direction: column;
-  padding: 75px;
+  padding: 75px 60px;
 }
 .sessionProcess section:nth-child(odd) {
   background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
@@ -149,6 +150,12 @@ header .menuDisplay {
   line-height: 1.5rem;
   font-family: "Roboto", sans-serif;
   margin-bottom: 5px;
+}
+.sessionProcess section picture {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  margin: 0 auto;
 }
 .sessionProcess section picture img {
   width: 100%;
@@ -222,10 +229,6 @@ footer #myInfo {
   font-size: 1.2rem;
 }
 
-.heroSection {
-  padding: 50px;
-}
-
 /* Medium devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 700px) {
   header {
@@ -275,6 +278,22 @@ footer #myInfo {
   header .sideMenu .menuList .servicesHideSmallView {
     display: block;
   }
+  .heroSection {
+    padding: 75px 100px;
+  }
+  .sessionProcess section {
+    padding: 85px;
+  }
+  .sessionProcess section ul {
+    padding: 0 50px;
+  }
+  .sessionProcess section ul li {
+    font-size: 18px;
+  }
+  .sessionProcess section picture {
+    max-width: 550px;
+    margin: 0 auto;
+  }
   footer section iframe {
     width: 80%;
     height: 350px;
@@ -298,6 +317,23 @@ footer #myInfo {
   header .sideMenu .menuList li {
     font-size: 0.85rem;
     margin: 15px;
+  }
+  .sessionProcess section {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .sessionProcess section:nth-child(even) div {
+    order: 2;
+  }
+  .sessionProcess section div {
+    margin: auto 25px;
+  }
+  .sessionProcess section picture {
+    width: 75%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
   }
   footer {
     display: grid;
