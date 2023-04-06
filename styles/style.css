@@ -228,6 +228,52 @@ header .menuDisplay {
   background: #2696e9;
 }
 
+.reviewsTitle {
+  color: orange;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.reviewsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+.reviewsContainer .review {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.reviewsContainer .review img {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.reviewsContainer .review p:nth-of-type(1) {
+  color: #13101c;
+  font-weight: 600;
+  font-style: oblique;
+  margin: 10px auto 5px;
+}
+.reviewsContainer .review p:nth-of-type(2) {
+  color: orange;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.reviewsContainer .review p:nth-of-type(3) {
+  font-size: 0.9rem;
+}
+.reviewsContainer .review:last-child {
+  display: none;
+}
+
 footer {
   background: linear-gradient(to right top, #13101c 50%, #082b63);
   color: orange;
@@ -374,6 +420,18 @@ footer #myInfo {
     height: 500px;
     margin: 0 100px 75px;
   }
+  .reviewsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .reviewsContainer .review img {
+    width: 150px;
+  }
+  .reviewsContainer .review p:nth-of-type(3) {
+    font-size: 1.1rem;
+  }
+  .reviewsContainer .review:last-child {
+    display: block;
+  }
   footer section iframe {
     width: 80%;
     height: 350px;
@@ -423,6 +481,18 @@ footer #myInfo {
     height: 500px;
     max-width: 800px;
     margin: 0 auto 75px;
+  }
+  .reviewsContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .reviewsContainer .review img {
+    width: 125px;
+  }
+  .reviewsContainer .review p:nth-of-type(3) {
+    font-size: 1.1rem;
+  }
+  .reviewsContainer .review:last-child {
+    display: none;
   }
   footer {
     display: grid;

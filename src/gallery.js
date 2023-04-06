@@ -1,5 +1,6 @@
 import PhotoSession from "../scripts/gallery.mjs";
 import sessionSelector from "../scripts/sessionSelector.mjs";
+import Reviews from "../scripts/reviews.mjs";
 
 document.addEventListener("DOMContentLoaded", function () {
     sessionSelector();
@@ -12,3 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionTitle.innerHTML = querySearch;
     }
 });
+
+const reviews = new Reviews('.reviewsContainer');
+reviews.fetchReviews();
