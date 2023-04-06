@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const session = new PhotoSession();
     if (querySearch) {
         session.photoSearch(querySearch);
-        console.log(querySearch);
+        const sessionTitle = document.querySelector(".sessionTitle");
+        sessionTitle.innerHTML = querySearch;
     }
 });

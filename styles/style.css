@@ -103,6 +103,7 @@ header .menuDisplay {
 
 .heroSection {
   padding: 50px;
+  padding-bottom: 15px;
 }
 .heroSection h1 {
   text-align: center;
@@ -115,6 +116,12 @@ header .menuDisplay {
   line-height: 1.5rem;
   margin-bottom: 25px;
   color: #13101c;
+}
+.heroSection h2 {
+  margin-top: 50px;
+  color: orange;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .sessionProcess {
@@ -165,6 +172,60 @@ header .menuDisplay {
 .sessionProcess section div img {
   max-width: 300px;
   margin: 0 auto;
+}
+
+.sessionGallery {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin: 0 50px 75px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(50deg, #e6f3ff 0%, #f3e7ff 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.sessionGallery .img-slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.sessionGallery .img-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  clip-path: circle(0% at 0 50%);
+}
+.sessionGallery .img-slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+.sessionGallery .img-slider .slide img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sessionGallery .navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+.sessionGallery .navigation .slide-btn {
+  background: rgba(255, 255, 255, 0.5);
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sessionGallery .navigation .slide-btn.active {
+  background: #2696e9;
 }
 
 footer {
@@ -284,9 +345,13 @@ footer #myInfo {
   }
   .heroSection {
     padding: 75px 100px;
+    padding-bottom: 15px;
+  }
+  .heroSection h2 {
+    font-size: 1.7rem;
   }
   .sessionProcess section {
-    padding: 85px;
+    padding: 60px 85px;
   }
   .sessionProcess section ul {
     padding: 0 50px;
@@ -304,6 +369,10 @@ footer #myInfo {
   .sessionProcess section picture img:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .sessionGallery {
+    height: 500px;
+    margin: 0 100px 75px;
   }
   footer section iframe {
     width: 80%;
@@ -346,6 +415,14 @@ footer #myInfo {
     max-width: 500px;
     display: flex;
     justify-content: center;
+  }
+  .heroSection h2 {
+    font-size: 2rem;
+  }
+  .sessionGallery {
+    height: 500px;
+    max-width: 800px;
+    margin: 0 auto 75px;
   }
   footer {
     display: grid;

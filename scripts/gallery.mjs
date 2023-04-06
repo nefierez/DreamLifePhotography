@@ -18,7 +18,7 @@ export default class PhotoSession {
                 data.results.forEach((photo, index) => {
                     const photoHTML = `
                     <picture class="slide ${index === 0 ? 'active' : ''}">
-                        <source media="(max-width: 499px)" srcset="${photo.urls.small}">
+                        <source media="(max-width: 549px)" srcset="${photo.urls.small}">
                         <img src="${photo.urls.regular}" alt="${photo.description}">
                     </picture>`;
                     this.photoSlider.insertAdjacentHTML('beforeend', photoHTML);
@@ -27,6 +27,7 @@ export default class PhotoSession {
                     <div class="slide-btn ${index === 0 ? 'active' : ''}"></div>`;
                     this.navigation.insertAdjacentHTML('beforeend', buttonHTML);
                 });
+
 
                 this.photoSlide(); // call photoSlide here
             }.bind(this));
