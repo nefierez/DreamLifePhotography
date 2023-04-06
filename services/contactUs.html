@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Dream Life Photography | Services</title>
+</head>
+
+<body>
+    <header>
+        <div class="section-top">
+            <img src="../assets/web_logo.svg" alt="Camara image for logo">
+            <a href="../index.html">
+                <p>Dream Life</p>
+                <p>Photography</p>
+            </a>
+            <div class="menuIcon" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="sideMenu">
+            <ul class="menuList">
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="../services/index.html">
+                    <li class="servicesHideSmallView">Services</li>
+                </a>
+                <li class="services">Services</li>
+                <a href="../services/gallery.html?id=weddings&Celebration" id="Weddings" class="sessionType">
+                    <li class="servicesHide">Weddings</li>
+                </a>
+                <a href="../services/gallery.html?id=couples" id="Couples" class="sessionType">
+                    <li class="servicesHide">Couples</li>
+                </a>
+                <a href="../services/gallery.html?id=families" id="Families" class="sessionType">
+                    <li class="servicesHide">Families</li>
+                </a>
+                <a href="../services/gallery.html?id=birthdays" id="Birthdays" class="sessionType">
+                    <li class="servicesHide">Birthdays</li>
+                </a>
+                <a href="../services/gallery.html?id=graduations" id="Graduations" class="sessionType">
+                    <li class="servicesHide">Graduations</li>
+                </a>
+                <a href="../services/gallery.html?id=newborns" id="Newborns" class="sessionType">
+                    <li class="servicesHide">Newborns</li>
+                </a>
+                <a href="../services/contactUs.html">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="heroSection">
+            <div class="heroContent">
+                <h1>Contact Us!</h1>
+                <p>If you have any inquiries, kindly utilize the provided contact form or send us an email at @byui.edu.
+                    For event bookings, please furnish us with the date and location of your occasion, and provide us
+                    with a brief description of the day you are envisioning. We look forward to hearing from you soon.
+                </p>
+                <p>Still Work in Progress!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section id="footerContact">
+            <p>☎ +(502) 5257-3392</p>
+            <p>📧 service@DreamLifePhotography.com</p>
+            <p>🏛 Avenida La Reforma 12-54<br>Guatemala, 01009</p>
+        </section>
+        <section id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.9857140598087!2d-90.52146968484934!3d14.599889653190454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3cdef0436c7%3A0x4f8e4a015d5e1a82!2sEdificio%20Grand%20Reforma%2010!5e0!3m2!1sen!2sgt!4v1680415443462!5m2!1sen!2sgt"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <form id="newsletter">
+            <label><input id="inputEmail" type="email" name="email" placeholder="Email Address" required=""></label>
+            <label><input id="newsletterButton" type="submit" value="Reserve Now!"></label>
+        </form>
+        <picture class="logo">
+            <a href="../index.html"><img src="../assets/web_logo.svg" alt="Dream Life Photography Logo">
+                <p>Dream Life</p>
+                <p>Photography</p>
+            </a>
+        </picture>
+        <section id="myInfo">
+            <p>&copy;<span id="year"></span> Dream Life Photography • Designed by Nefi Perez</p>
+        </section>
+    </footer>
+</body>
+<script src="../src/index.js"></script>
+
+</html>
