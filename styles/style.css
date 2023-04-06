@@ -68,6 +68,7 @@ header nav {
   position: fixed;
   transform: translateX(-100%);
   transition: 500ms ease-in-out;
+  z-index: 3;
 }
 header nav .menuList {
   display: flex;
